@@ -8,6 +8,9 @@ type Hash16 interface {
     Sum16() uint16
 }
 
+// 大小
+const Size = 2
+
 type digest struct {
     sum   uint16
     table *Table
@@ -33,7 +36,7 @@ func (this *digest) Reset() {
 
 // Size
 func (this *digest) Size() int {
-    return 2
+    return Size
 }
 
 // BlockSize
